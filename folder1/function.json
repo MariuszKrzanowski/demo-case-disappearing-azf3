@@ -1,0 +1,29 @@
+﻿{
+  "scriptFile": "..\\bin\\MrMatrix.Demo.Azf3.dll",
+  "entryPoint": "MrMatrix.Demo.Azf3.Function.Run",
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "authLevel": "function",
+      "methods": [
+        "post"
+      ],
+      "route": "route/function_A"
+    },
+    {
+      "name": "assignedTable",
+      "type": "table",
+      "direction": "in",
+      "tableName": "TableAssignedToClientA",
+      "connection": "StorageConnectionString"
+    },
+    {
+      "name": "res",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}
